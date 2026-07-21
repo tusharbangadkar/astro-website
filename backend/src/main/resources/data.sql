@@ -5,6 +5,7 @@ INSERT INTO services (name, description, category, icon, duration_minutes, price
 ('House Construction Visit (As Per Vastu)', 'On-site guidance during construction to align the property with Vastu principles from the ground up.', 'Vastu', 'home', 30, 3000.0),
 ('Vastu Correction Visit', 'On-site visit to identify and correct Vastu doshas in an existing home or workplace.', 'Vastu', 'compass', 30, 1200.0);
 
+
 INSERT INTO reviews (client_name, rating, comment, service_taken) VALUES
 ('Ananya R.', 5, 'The Vashikaran Kriya consultation gave me real clarity on my relationship issues. Guruji explained everything with patience and honesty.', 'Vashikaran Kriya'),
 ('Rahul Mehta', 5, 'Booked the Jan Dhan Aakarshan Kriya for my business - within a couple of months things genuinely started moving in the right direction.', 'Jan Dhan Aakarshan Kriya'),

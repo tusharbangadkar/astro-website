@@ -1,14 +1,17 @@
 :root {
-  --cream: #FFF9EC;
+  /* --cream: #FFF9EC  -gold: #C99A2E;; */
+  --cream: #FFFFFF;
+  --white: #FFFFFF;
   --cream-2: #FBEFC8;
   --cream-3: #F3DE9C;
-  --gold: #C99A2E;
-  --gold-deep: #9C7412;
+  --gold: #4a3a09;
+    --gold-deep: rgba(42, 40, 36, 0.294)
+  /* --gold-deep: #9C7412; */
   --gold-bright: #F0C244;
   --ink: #3A2E10;
   --ink-soft: #6B5A2E;
   --rose: #B5651D;
-  --brown-deep: #2B2007;
+  --brown-deep: #11100d;
 
   --font-display: 'Fraunces', serif;
   --font-body: 'Inter', sans-serif;
@@ -181,7 +184,7 @@ button {
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  background: radial-gradient(ellipse at 20% 0%, var(--cream-3) 0%, var(--cream-2) 45%, var(--cream) 80%);
+  background: radial-gradient(ellipse at 20% 0%, var(--cream-3) 0%, var(--cream-2) 45%, var(--white) 80%);
   color: var(--ink);
   overflow: hidden;
 }
@@ -270,7 +273,7 @@ button {
 
 /* ---------- About ---------- */
 .about {
-  background: var(--cream);
+  background: var(--white);
 }
 
 .about-grid {
@@ -283,7 +286,7 @@ button {
 .about-portrait {
   aspect-ratio: 4/5;
   border-radius: 4px;
-  background: linear-gradient(160deg, var(--cream-2), var(--cream-3));
+  background: linear-gradient(160deg, var(--white), var(--cream-3));
   border: 1px solid rgba(184,148,75,0.35);
   position: relative;
   overflow: hidden;
@@ -311,7 +314,7 @@ button {
 
 /* ---------- Services ---------- */
 .services {
-  background: linear-gradient(180deg, var(--cream-2), var(--cream-3));
+  background: linear-gradient(180deg, var(--white), var(--cream-3));
 }
 
 .services .section-title { color: var(--ink); }
