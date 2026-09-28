@@ -1,0 +1,245 @@
+[1mdiff --git a/backend/src/main/resources/data.sql b/backend/src/main/resources/data.sql[m
+[1mindex e193176..dc5e8dd 100644[m
+[1m--- a/backend/src/main/resources/data.sql[m
+[1m+++ b/backend/src/main/resources/data.sql[m
+[36m@@ -1,7 +1,29 @@[m
+[32m+[m[32m-- INSERT INTO services (name, description, category, icon, duration_minutes, price) VALUES[m
+[32m+[m[32m-- ('Vashikaran Kriya', 'Vashikaran & Attraction Remedies for love, relationship, and married life problems.', 'Tantra Kriya', 'heart', 30, 7000.0),[m
+[32m+[m[32m-- ('Jan Dhan Aakarshan Kriya', 'Business & Career Success Rituals for prosperity and wealth blessing.', 'Tantra Kriya', 'coins', 30, 21000.0),[m
+[32m+[m[32m-- ('Uchchatan Stambhan Kriya', 'Protection & Spiritual Shielding Rituals for negative energy and evil eye removal.', 'Tantra Kriya', 'shield', 30, 12000.0),[m
+[32m+[m[32m-- ('House Construction Visit (As Per Vastu)', 'On-site guidance during construction to align the property with Vastu principles from the ground up.', 'Vastu', 'home', 30, 3000.0),[m
+[32m+[m[32m-- ('Vastu Correction Visit', 'On-site visit to identify and correct Vastu doshas in an existing home or workplace.', 'Vastu', 'compass', 30, 1200.0);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m-- INSERT INTO reviews (client_name, rating, comment, service_taken) VALUES[m
+[32m+[m[32m-- ('Ananya R.', 5, 'The Vashikaran Kriya consultation gave me real clarity on my relationship issues. Guruji explained everything with patience and honesty.', 'Vashikaran Kriya'),[m
+[32m+[m[32m-- ('Rahul Mehta', 5, 'Booked the Jan Dhan Aakarshan Kriya for my business - within a couple of months things genuinely started moving in the right direction.', 'Jan Dhan Aakarshan Kriya'),[m
+[32m+[m[32m-- ('Priya Sharma', 5, 'The protection ritual gave our whole family peace of mind during a very difficult time. Truly grateful for the guidance.', 'Uchchatan Stambhan Kriya'),[m
+[32m+[m[32m-- ('Vikram Singh', 5, 'Guruji visited our site before construction and the Vastu guidance was extremely detailed and practical.', 'House Construction Visit (As Per Vastu)'),[m
+[32m+[m[32m-- ('Sneha Patel', 5, 'The Vastu correction visit to our home was thorough - simple changes he suggested made a noticeable difference.', 'Vastu Correction Visit'),[m
+[32m+[m[32m-- ('Arjun Nair', 5, 'Very knowledgeable and straightforward. Booking on WhatsApp was quick and the whole process felt professional.', 'Jan Dhan Aakarshan Kriya'),[m
+[32m+[m[32m-- ('Kavita Iyer', 5, 'Genuinely one of the most authentic astrologers I have consulted. Highly recommend for Tantra Kriya remedies.', 'Vashikaran Kriya'),[m
+[32m+[m[32m-- ('Meera Joshi', 4, 'Good, honest consultation on Vastu for our new office. Direct and did not sugarcoat anything, which I appreciated.', 'Vastu Correction Visit');[m
+ INSERT INTO services (name, description, category, icon, duration_minutes, price) VALUES[m
+[32m+[m[32m('Kundli & Life Guidance', 'Birth chart analysis covering career and profession, finance and business, marriage and relationships, child and education, health, foreign travel and settlement, and legal or court matters.', 'Astrology & Numerology', 'star', 30, 700.0),[m
+[32m+[m[32m('Dosha & Remedial Guidance', 'Dosha analysis (Mangal, Kaal Sarp, Pitru, and others) along with Graha Shanti and puja guidance, gemstone recommendations, and personalized mantra and spiritual remedies.', 'Astrology & Numerology', 'shield', 30, 700.0),[m
+[32m+[m[32m('Timing & Horoscope Guidance', 'Shubh Ashubh Muhurat for auspicious timing, along with yearly (Varshaphal), monthly, and daily horoscope consultations.', 'Astrology & Numerology', 'calendar', 30, 700.0),[m
+[32m+[m
+ ('Vashikaran Kriya', 'Vashikaran & Attraction Remedies for love, relationship, and married life problems.', 'Tantra Kriya', 'heart', 30, 7000.0),[m
+ ('Jan Dhan Aakarshan Kriya', 'Business & Career Success Rituals for prosperity and wealth blessing.', 'Tantra Kriya', 'coins', 30, 21000.0),[m
+ ('Uchchatan Stambhan Kriya', 'Protection & Spiritual Shielding Rituals for negative energy and evil eye removal.', 'Tantra Kriya', 'shield', 30, 12000.0),[m
+[32m+[m
+ ('House Construction Visit (As Per Vastu)', 'On-site guidance during construction to align the property with Vastu principles from the ground up.', 'Vastu', 'home', 30, 3000.0),[m
+ ('Vastu Correction Visit', 'On-site visit to identify and correct Vastu doshas in an existing home or workplace.', 'Vastu', 'compass', 30, 1200.0);[m
+ [m
+[36m@@ -14,4 +36,4 @@[m [mINSERT INTO reviews (client_name, rating, comment, service_taken) VALUES[m
+ ('Sneha Patel', 5, 'The Vastu correction visit to our home was thorough - simple changes he suggested made a noticeable difference.', 'Vastu Correction Visit'),[m
+ ('Arjun Nair', 5, 'Very knowledgeable and straightforward. Booking on WhatsApp was quick and the whole process felt professional.', 'Jan Dhan Aakarshan Kriya'),[m
+ ('Kavita Iyer', 5, 'Genuinely one of the most authentic astrologers I have consulted. Highly recommend for Tantra Kriya remedies.', 'Vashikaran Kriya'),[m
+[31m-('Meera Joshi', 4, 'Good, honest consultation on Vastu for our new office. Direct and did not sugarcoat anything, which I appreciated.', 'Vastu Correction Visit');[m
+[32m+[m[32m('Meera Joshi', 4, 'Good, honest consultation on Vastu for our new office. Direct and did not sugarcoat anything, which I appreciated.', 'Vastu Correction Visit');[m
+\ No newline at end of file[m
+[1mdiff --git a/frontend/src/components/Services.jsx b/frontend/src/components/Services.jsx[m
+[1mindex 3e9b361..b1d3957 100644[m
+[1m--- a/frontend/src/components/Services.jsx[m
+[1m+++ b/frontend/src/components/Services.jsx[m
+[36m@@ -1,12 +1,95 @@[m
+[32m+[m[32m// // import React, { useEffect, useState } from 'react'[m
+[32m+[m[32m// // import { fetchServices } from '../api.js'[m
+[32m+[m
+[32m+[m[32m// // const FALLBACK_SERVICES = [[m
+[32m+[m[32m// //   { id: 1, name: 'Vashikaran Kriya', description: 'Vashikaran & Attraction Remedies for love, relationship, and married life problems.', category: 'Tantra Kriya', price: 7000 },[m
+[32m+[m[32m// //   { id: 2, name: 'Jan Dhan Aakarshan Kriya', description: 'Business & Career Success Rituals for prosperity and wealth blessing.', category: 'Tantra Kriya', price: 21000 },[m
+[32m+[m[32m// //   { id: 3, name: 'Uchchatan Stambhan Kriya', description: 'Protection & Spiritual Shielding Rituals for negative energy and evil eye removal.', category: 'Tantra Kriya', price: 12000 },[m
+[32m+[m[32m// //   { id: 4, name: 'House Construction Visit (As Per Vastu)', description: 'On-site guidance during construction to align the property with Vastu principles.', category: 'Vastu', price: 3000 },[m
+[32m+[m[32m// //   { id: 5, name: 'Vastu Correction Visit', description: 'On-site visit to identify and correct Vastu doshas in an existing home or workplace.', category: 'Vastu', price: 1200 },[m
+[32m+[m[32m// // ][m
+[32m+[m
+[32m+[m[32m// // function formatRupees(amount) {[m
+[32m+[m[32m// //   if (amount === undefined || amount === null) return ''[m
+[32m+[m[32m// //   return `₹${Number(amount).toLocaleString('en-IN')}`[m
+[32m+[m[32m// // }[m
+[32m+[m
+[32m+[m[32m// // export default function Services() {[m
+[32m+[m[32m// //   const [services, setServices] = useState(FALLBACK_SERVICES)[m
+[32m+[m
+[32m+[m[32m// //   useEffect(() => {[m
+[32m+[m[32m// //     fetchServices()[m
+[32m+[m[32m// //       .then((data) => { if (data && data.length) setServices(data) })[m
+[32m+[m[32m// //       .catch(() => { /* keep fallback list if the API is unreachable */ })[m
+[32m+[m[32m// //   }, [])[m
+[32m+[m
+[32m+[m[32m// //   const categories = [...new Set(services.map((s) => s.category || 'Services'))][m
+[32m+[m
+[32m+[m[32m// //   return ([m
+[32m+[m[32m// //     <section id="services" className="section services">[m
+[32m+[m[32m// //       <div className="container">[m
+[32m+[m[32m// //         <div className="services-header">[m
+[32m+[m[32m// //           <div>[m
+[32m+[m[32m// //             <span className="eyebrow">✶ What we offer</span>[m
+[32m+[m[32m// //             <h2 className="section-title">Astrology Chart Analysis, Numerology, Tantra Kriya &amp; Vastu services</h2>[m
+[32m+[m[32m// //             <p className="section-lede">[m
+[32m+[m[32m// //               Traditional remedies and on-site consultations, priced individually[m
+[32m+[m[32m// //               depending on the ritual or visit.[m
+[32m+[m[32m// //             </p>[m
+[32m+[m[32m// //           </div>[m
+[32m+[m[32m// //           <div className="fee-badge">PRICES IN ₹ &middot; PER SERVICE</div>[m
+[32m+[m[32m// //         </div>[m
+[32m+[m
+[32m+[m[32m// //         {categories.map((category) => ([m
+[32m+[m[32m// //           <div key={category} style={{ marginBottom: 44 }}>[m
+[32m+[m[32m// //             <h3 style={{[m
+[32m+[m[32m// //               fontFamily: 'var(--font-mono)',[m
+[32m+[m[32m// //               fontSize: 13,[m
+[32m+[m[32m// //               letterSpacing: '0.1em',[m
+[32m+[m[32m// //               textTransform: 'uppercase',[m
+[32m+[m[32m// //               color: 'var(--gold)',[m
+[32m+[m[32m// //               margin: '0 0 18px',[m
+[32m+[m[32m// //             }}>[m
+[32m+[m[32m// //               {category} services[m
+[32m+[m[32m// //             </h3>[m
+[32m+[m[32m// //             <div className="service-grid">[m
+[32m+[m[32m// //               {services.filter((s) => (s.category || 'Services') === category).map((service, i) => ([m
+[32m+[m[32m// //                 <div className="service-card" key={service.id ?? service.name}>[m
+[32m+[m[32m// //                   <span className="service-index">{String(i + 1).padStart(2, '0')}</span>[m
+[32m+[m[32m// //                   <h3>{service.name}</h3>[m
+[32m+[m[32m// //                   <p>{service.description}</p>[m
+[32m+[m[32m// //                   <div className="service-meta">[m
+[32m+[m[32m// //                     <span>Consultation</span>[m
+[32m+[m[32m// //                     <span>{formatRupees(service.price)}</span>[m
+[32m+[m[32m// //                   </div>[m
+[32m+[m[32m// //                 </div>[m
+[32m+[m[32m// //               ))}[m
+[32m+[m[32m// //             </div>[m
+[32m+[m[32m// //           </div>[m
+[32m+[m[32m// //         ))}[m
+[32m+[m[32m// //       </div>[m
+[32m+[m[32m// //     </section>[m
+[32m+[m[32m// //   )[m
+[32m+[m[32m// // }[m
+ // import React, { useEffect, useState } from 'react'[m
+ // import { fetchServices } from '../api.js'[m
+ [m
+ // const FALLBACK_SERVICES = [[m
+[31m-//   { id: 1, name: 'Vashikaran Kriya', description: 'Vashikaran & Attraction Remedies for love, relationship, and married life problems.', category: 'Tantra Kriya', price: 7000 },[m
+[31m-//   { id: 2, name: 'Jan Dhan Aakarshan Kriya', description: 'Business & Career Success Rituals for prosperity and wealth blessing.', category: 'Tantra Kriya', price: 21000 },[m
+[31m-//   { id: 3, name: 'Uchchatan Stambhan Kriya', description: 'Protection & Spiritual Shielding Rituals for negative energy and evil eye removal.', category: 'Tantra Kriya', price: 12000 },[m
+[31m-//   { id: 4, name: 'House Construction Visit (As Per Vastu)', description: 'On-site guidance during construction to align the property with Vastu principles.', category: 'Vastu', price: 3000 },[m
+[31m-//   { id: 5, name: 'Vastu Correction Visit', description: 'On-site visit to identify and correct Vastu doshas in an existing home or workplace.', category: 'Vastu', price: 1200 },[m
+[32m+[m[32m//   { id: 1, name: 'Birth Chart (Kundli) Analysis', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 2, name: 'Career & Profession Guidance', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 3, name: 'Finance & Business Guidance', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 4, name: 'Legal & Court Case Astrology', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 5, name: 'Foreign Travel & Settlement Analysis', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 6, name: 'Marriage & Relationship (Kundli Matching)', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 7, name: 'Child & Education Guidance', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 8, name: 'Health Astrology Guidance', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 9, name: 'Dosha Analysis (Mangal, Kaal Sarp, Pitru, etc.)', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 10, name: 'Graha Shanti & Puja Guidance', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 11, name: 'Shubh Ashubh Muhurat', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 12, name: 'Yearly Horoscope (Varshaphal)', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 13, name: 'Daily/Monthly Horoscope Consultation', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 14, name: 'Gemstone Recommendations', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m//   { id: 15, name: 'Personalized Mantra & Spiritual Remedies', description: '', category: 'Astrology & Numerology', price: 700 },[m
+ // ][m
+ [m
+ // function formatRupees(amount) {[m
+[36m@@ -31,10 +114,10 @@[m
+ //         <div className="services-header">[m
+ //           <div>[m
+ //             <span className="eyebrow">✶ What we offer</span>[m
+[31m-//             <h2 className="section-title">Astrology Chart Analysis, Numerology, Tantra Kriya &amp; Vastu services</h2>[m
+[32m+[m[32m//             <h2 className="section-title">Astrology &amp; Numerology Services</h2>[m
+ //             <p className="section-lede">[m
+[31m-//               Traditional remedies and on-site consultations, priced individually[m
+[31m-//               depending on the ritual or visit.[m
+[32m+[m[32m//               One-on-one consultations covering every major life question, priced[m
+[32m+[m[32m//               simply per service.[m
+ //             </p>[m
+ //           </div>[m
+ //           <div className="fee-badge">PRICES IN ₹ &middot; PER SERVICE</div>[m
+[36m@@ -57,7 +140,7 @@[m
+ //                 <div className="service-card" key={service.id ?? service.name}>[m
+ //                   <span className="service-index">{String(i + 1).padStart(2, '0')}</span>[m
+ //                   <h3>{service.name}</h3>[m
+[31m-//                   <p>{service.description}</p>[m
+[32m+[m[32m//                   {service.description && <p>{service.description}</p>}[m
+ //                   <div className="service-meta">[m
+ //                     <span>Consultation</span>[m
+ //                     <span>{formatRupees(service.price)}</span>[m
+[36m@@ -71,27 +154,33 @@[m
+ //     </section>[m
+ //   )[m
+ // }[m
+[32m+[m
+[32m+[m
+ import React, { useEffect, useState } from 'react'[m
+ import { fetchServices } from '../api.js'[m
+ [m
+[32m+[m[32m// Fallback data shown if the backend API is unreachable.[m
+[32m+[m[32m// Keep this in sync with backend/src/main/resources/data.sql.[m
+ const FALLBACK_SERVICES = [[m
+[31m-  { id: 1, name: 'Birth Chart (Kundli) Analysis', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 2, name: 'Career & Profession Guidance', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 3, name: 'Finance & Business Guidance', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 4, name: 'Legal & Court Case Astrology', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 5, name: 'Foreign Travel & Settlement Analysis', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 6, name: 'Marriage & Relationship (Kundli Matching)', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 7, name: 'Child & Education Guidance', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 8, name: 'Health Astrology Guidance', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 9, name: 'Dosha Analysis (Mangal, Kaal Sarp, Pitru, etc.)', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 10, name: 'Graha Shanti & Puja Guidance', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 11, name: 'Shubh Ashubh Muhurat', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 12, name: 'Yearly Horoscope (Varshaphal)', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 13, name: 'Daily/Monthly Horoscope Consultation', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 14, name: 'Gemstone Recommendations', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[31m-  { id: 15, name: 'Personalized Mantra & Spiritual Remedies', description: '', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m  // Astrology & Numerology (merged into 3 focused services)[m
+[32m+[m[32m  { id: 1, name: 'Kundli & Life Guidance', description: 'Birth chart analysis covering career and profession, finance and business, marriage and relationships, child and education, health, foreign travel and settlement, and legal or court matters.', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m  { id: 2, name: 'Dosha & Remedial Guidance', description: 'Dosha analysis (Mangal, Kaal Sarp, Pitru, and others) along with Graha Shanti and puja guidance, gemstone recommendations, and personalized mantra and spiritual remedies.', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m[32m  { id: 3, name: 'Timing & Horoscope Guidance', description: 'Shubh Ashubh Muhurat for auspicious timing, along with yearly (Varshaphal), monthly, and daily horoscope consultations.', category: 'Astrology & Numerology', price: 700 },[m
+[32m+[m
+[32m+[m[32m  // Tantra Kriya[m
+[32m+[m[32m  { id: 4, name: 'Vashikaran Kriya', description: 'Vashikaran & Attraction Remedies for love, relationship, and married life problems.', category: 'Tantra Kriya', price: 7000 },[m
+[32m+[m[32m  { id: 5, name: 'Jan Dhan Aakarshan Kriya', description: 'Business & Career Success Rituals for prosperity and wealth blessing.', category: 'Tantra Kriya', price: 21000 },[m
+[32m+[m[32m  { id: 6, name: 'Uchchatan Stambhan Kriya', description: 'Protection & Spiritual Shielding Rituals for negative energy and evil eye removal.', category: 'Tantra Kriya', price: 12000 },[m
+[32m+[m
+[32m+[m[32m  // Vastu[m
+[32m+[m[32m  { id: 7, name: 'House Construction Visit (As Per Vastu)', description: 'On-site guidance during construction to align the property with Vastu principles.', category: 'Vastu', price: 3000 },[m
+[32m+[m[32m  { id: 8, name: 'Vastu Correction Visit', description: 'On-site visit to identify and correct Vastu doshas in an existing home or workplace.', category: 'Vastu', price: 1200 },[m
+ ][m
+ [m
+[32m+[m[32m// Fixed display order for category sections, regardless of the order[m
+[32m+[m[32m// services come back from the API.[m
+[32m+[m[32mconst CATEGORY_ORDER = ['Astrology & Numerology', 'Tantra Kriya', 'Vastu'][m
+[32m+[m
+ function formatRupees(amount) {[m
+   if (amount === undefined || amount === null) return ''[m
+   return `₹${Number(amount).toLocaleString('en-IN')}`[m
+[36m@@ -106,7 +195,11 @@[m [mexport default function Services() {[m
+       .catch(() => { /* keep fallback list if the API is unreachable */ })[m
+   }, [])[m
+ [m
+[31m-  const categories = [...new Set(services.map((s) => s.category || 'Services'))][m
+[32m+[m[32m  const presentCategories = new Set(services.map((s) => s.category || 'Services'))[m
+[32m+[m[32m  const categories = [[m
+[32m+[m[32m    ...CATEGORY_ORDER.filter((c) => presentCategories.has(c)),[m
+[32m+[m[32m    ...[...presentCategories].filter((c) => !CATEGORY_ORDER.includes(c)),[m
+[32m+[m[32m  ][m
+ [m
+   return ([m
+     <section id="services" className="section services">[m
+[36m@@ -114,10 +207,10 @@[m [mexport default function Services() {[m
+         <div className="services-header">[m
+           <div>[m
+             <span className="eyebrow">✶ What we offer</span>[m
+[31m-            <h2 className="section-title">Astrology &amp; Numerology Services</h2>[m
+[32m+[m[32m            <h2 className="section-title">Astrology, Numerology, Tantra Kriya &amp; Vastu Services</h2>[m
+             <p className="section-lede">[m
+[31m-              One-on-one consultations covering every major life question, priced[m
+[31m-              simply per service.[m
+[32m+[m[32m              One-on-one consultations and on-site visits covering every major[m
+[32m+[m[32m              life question, priced simply per service.[m
+             </p>[m
+           </div>[m
+           <div className="fee-badge">PRICES IN ₹ &middot; PER SERVICE</div>[m
