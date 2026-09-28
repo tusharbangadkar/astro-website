@@ -125,3 +125,4 @@ This outputs static files to `frontend/dist`, which you can deploy to any static
 - The sample testimonials and astrologer bio are placeholder content — swap them for
   your friend's real details, photo, and credentials before launch.
 "# Mishraji" 
+"# Mishraji" 
