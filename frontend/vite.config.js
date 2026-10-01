@@ -5,7 +5,8 @@ import react from '@vitejs/plugin-react'
 // GitHub Pages serves your site at https://yourusername.github.io/repo-name/
 // so Vite needs to know that subpath when building.
 export default defineConfig({
-  base: '/astro-website/',
+  // base: '/astro-website/',
+  base: '/',
   plugins: [react()],
   server: {
     port: 5173,
