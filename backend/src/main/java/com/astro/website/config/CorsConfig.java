@@ -13,10 +13,14 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
+                // registry.addMapping("/api/**")
+                //         .allowedOrigins("http://localhost:5173", "http://localhost:3000")
+                //         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                //         .allowedHeaders("*");
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:5173", "http://localhost:3000")
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*");
+        .allowedOriginPatterns("https://*.onrender.com", "http://localhost:*")
+        .allowedMethods("GET", "OPTIONS")
+        .allowedHeaders("*");
             }
         };
     }
